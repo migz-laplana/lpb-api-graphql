@@ -1,13 +1,3 @@
-const mockData = [
-  {
-    firstName: "Miguel Angelo",
-    middleName: "Pineda",
-    lastName: "Laplana",
-    position: "keyboardist",
-    batch: 20,
-  },
-];
-
 const mockBooks = [
   {
     title: "The Awakening",
@@ -19,4 +9,4 @@ const mockBooks = [
   },
 ];
 
-module.exports = { mockData, mockBooks };
+module.exports = { mockBooks };

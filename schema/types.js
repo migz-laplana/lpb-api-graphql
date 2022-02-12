@@ -27,11 +27,18 @@ const typeDefs = gql`
   type Query {
     books: [Book]
     authors: [String]
-    getMembers: [Member]
+    members: [Member]
   }
 
   type Mutation {
     addBook(title: String, author: String): Book
+    addMember(
+      firstName: String!
+      middleName: String
+      lastName: String!
+      position: String!
+      batch: Int
+    ): Member
   }
 `;
 
