@@ -1,22 +1,8 @@
 const { ApolloServer } = require("apollo-server");
 
 const typeDefs = require("./schema/types");
-const { mockBooks, mockData } = require("./data/mockData");
+const resolvers = require("./schema/resolvers");
 
-// Resolvers define the technique for fetching the types defined in the
-// schema. This resolver retrieves books from the "books" array above.
-const resolvers = {
-  Query: {
-    books: () => mockBooks,
-  },
-  Mutation: {
-    addBook: (_, { title, author }) => {
-      const newBook = { title: title, author: author };
-      mockBooks.push(newBook);
-      return newBook;
-    },
-  },
-};
 
 // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
