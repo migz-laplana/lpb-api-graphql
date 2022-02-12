@@ -1,6 +1,13 @@
 # Versions
 - Nodejs: 16.13.0
 - NPM: 8.1.4
+## Check Current Version
+```
+$ node -v
+v16.13.0
+$ npm -v
+8.1.4
+```
 
 # Setup
 0. `$ npm install`
