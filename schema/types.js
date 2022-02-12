@@ -12,11 +12,13 @@ const typeDefs = gql`
   }
 
   type Member {
-    firstName: String
-    middleName: String
-    lastName: String
+    firstname: String
+    middlename: String
+    lastname: String
     position: String
     batch: Int
+    birthday: String
+    isHonorary: Boolean
   }
 
   # The "Query" type is special: it lists all of the available queries that
@@ -31,11 +33,13 @@ const typeDefs = gql`
   type Mutation {
     addBook(title: String, author: String): Book
     addMember(
-      firstName: String!
-      middleName: String
-      lastName: String!
+      firstname: String!
+      middlename: String
+      lastname: String!
       position: String!
       batch: Int
+      birthday: String
+      isHonorary: Boolean
     ): Member
   }
 `;
