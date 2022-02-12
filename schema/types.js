@@ -29,6 +29,10 @@ const typeDefs = gql`
     authors: [String]
     getMembers: [Member]
   }
+
+  type Mutation {
+    addBook(title: String, author: String): Book
+  }
 `;
 
 module.exports = typeDefs;

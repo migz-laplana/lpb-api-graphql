@@ -9,6 +9,13 @@ const resolvers = {
   Query: {
     books: () => mockBooks,
   },
+  Mutation: {
+    addBook: (_, { title, author }) => {
+      const newBook = { title: title, author: author };
+      mockBooks.push(newBook);
+      return newBook;
+    },
+  },
 };
 
 // The ApolloServer constructor requires two parameters: your schema
